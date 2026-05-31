@@ -3,7 +3,7 @@ import { ShoppingCart, Plus, Minus, Clock, Coffee, Utensils, Wine } from "lucide
 
 const TAX_RATE = 0.05;
 const SERVICE_RATE = 0.07;
-const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbymoUO05UC3IXc-6gjX-1Jjds9PwZBEhFJeDONr4MYsK68slOqHQwaOJrG9v7IE5eY/exec";
+const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbx0FyVmJmoH9VKzhG5pGhAsc13UtrlQoguCN7Quyd9YaTfU2F-cTrL_-GIVLgWwjB2m/exec";
 
 const sections = [
   {
@@ -409,3 +409,4 @@ function Field({ label, error, children }) {
     </label>
   );
 }
+"update webhook url to send email from craft309 gmail"
