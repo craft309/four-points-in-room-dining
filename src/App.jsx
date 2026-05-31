@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { ShoppingCart, Plus, Minus, Clock, Coffee, Utensils, Wine } from "lucide-react";
+import fourPointsLogo from "./assets/four-points-logo.png";
+import craft309Logo from "./assets/craft309.png";
 
 const TAX_RATE = 0.12;
 const SERVICE_RATE = 0.07;
@@ -259,11 +261,45 @@ if (submitted) {
 
   return (
     <div className="page">
-      <header className="hero">
-        <p>Four Points by Sheraton</p>
-        <h1>In-Room Dining</h1>
-        <span>Convenient dining delivered directly to your room.</span>
-      </header>
+     <header className="hero">
+
+  <img
+    src={fourPointsLogo}
+    alt="Four Points"
+    style={{
+      maxWidth: "260px",
+      marginBottom: "16px"
+    }}
+  />
+
+  <img
+    src={craft309Logo}
+    alt="Craft 309"
+    style={{
+      maxWidth: "180px",
+      marginBottom: "20px"
+    }}
+  />
+
+  <h1>Four Points In-Room Dining</h1>
+
+  <span>
+    Prepared by Craft 309 and delivered directly to your room.
+  </span>
+
+  <div
+    style={{
+      marginTop: "18px",
+      fontSize: "14px",
+      color: "#475569"
+    }}
+  >
+    <strong>Breakfast:</strong> 6:00 AM – 11:00 AM
+    <br />
+    <strong>Lunch & Dinner:</strong> 12:00 PM – 10:00 PM
+  </div>
+
+</header>
 
       <form onSubmit={handleSubmit} className="layout">
         <main>
