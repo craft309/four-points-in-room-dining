@@ -269,3 +269,14 @@ textarea {
     align-items: flex-start;
   }
 }
+.plain-summary {
+  text-align: left;
+  max-width: 360px;
+  margin: 16px auto;
+  line-height: 1.8;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 14px;
+}
