@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { ShoppingCart, Plus, Minus, Clock, Coffee, Utensils, Wine } from "lucide-react";
 
-const TAX_RATE = 0.05;
+const TAX_RATE = 0.12;
 const SERVICE_RATE = 0.07;
 const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbx0FyVmJmoH9VKzhG5pGhAsc13UtrlQoguCN7Quyd9YaTfU2F-cTrL_-GIVLgWwjB2m/exec";
 
@@ -99,7 +99,7 @@ export default function App() {
     deliveryDate: todayISO(),
     asapTiming: "ASAP",
     scheduledWindow: "",
-    paymentType: "",
+    paymentType: "Charge to Room",
   });
 
   const allItems = useMemo(
@@ -249,7 +249,7 @@ if (submitted) {
         </ul>
 
         <p className="muted">
-          A receipt has been sent to the email address provided. For assistance,
+          Prepared fresh. Delivery times are estimates and may vary slightly based on kitchen volume. A receipt has been sent to the email address provided. For assistance,
           please contact the Front Desk.
         </p>
       </div>
@@ -339,9 +339,21 @@ if (submitted) {
 
             {orderType === "same-day" ? (
               <select value={form.asapTiming} onChange={(e) => updateForm("asapTiming", e.target.value)}>
-                {["ASAP", "30 Minutes", "1 Hour", "1.5 Hours", "2 Hours", "2.5 Hours", "3 Hours", "3.5 Hours", "4 Hours", "4.5 Hours", "5 Hours"].map((x) => (
-                  <option key={x}>{x}</option>
-                ))}
+               {[
+  "ASAP — estimated within 30 minutes",
+  "30–45 minutes",
+  "1 hour",
+  "1.5 hours",
+  "2 hours",
+  "2.5 hours",
+  "3 hours",
+  "3.5 hours",
+  "4 hours",
+  "4.5 hours",
+  "5 hours"
+].map((x) => (
+  <option key={x}>{x}</option>
+))}
               </select>
             ) : (
               <>
@@ -365,9 +377,7 @@ if (submitted) {
 
             <Field label="Payment Type *" error={errors.paymentType}>
               <select value={form.paymentType} onChange={(e) => updateForm("paymentType", e.target.value)}>
-                <option value="">Select payment type</option>
-                <option value="Charge to Room">Charge to Room</option>
-                <option value="Pay at Delivery">Pay at Delivery</option>
+               <option value="Charge to Room">Charge to Room</option>
               </select>
             </Field>
 
@@ -384,7 +394,7 @@ if (submitted) {
 
             <hr />
             <div className="summary-line"><span>Subtotal</span><span>{money(subtotal)}</span></div>
-            <div className="summary-line"><span>Tax 5%</span><span>{money(tax)}</span></div>
+            <div className="summary-line"><span>Tax 12%</span><span>{money(tax)}</span></div>
             <div className="summary-line"><span>Service Charge 7%</span><span>{money(serviceCharge)}</span></div>
             <div className="summary-line total"><span>Final Total</span><span>{money(total)}</span></div>
 
