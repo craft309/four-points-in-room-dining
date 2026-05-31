@@ -81,7 +81,7 @@ function buildTimeWindows(selectedDate) {
 }
 
 export default function App() {
-  const [openSection, setOpenSection] = useState("breakfast");
+  const [openSection, setOpenSection] = useState("");
   const [quantities, setQuantities] = useState({});
   const [orderType, setOrderType] = useState("same-day");
   const [submitted, setSubmitted] = useState(false);
@@ -156,6 +156,9 @@ export default function App() {
     if (!form.guestName.trim()) next.guestName = "Please enter guest name.";
     if (!form.roomNumber.trim()) next.roomNumber = "Please enter room number.";
     if (!form.phone.trim()) next.phone = "Please enter mobile phone number.";
+    if (!/^\S+@\S+\.\S+$/.test(form.email.trim())) {
+  next.email = "Please enter a valid email address.";
+}
     if (!form.paymentType) next.paymentType = "Please select payment type.";
     if (cartItems.length === 0) next.items = "Please select at least one menu item.";
 
@@ -221,19 +224,38 @@ export default function App() {
     }
   }
 
-  if (submitted) {
-    return (
-      <div className="page center">
-        <div className="card success">
-          <h1>Order Received</h1>
-          <p>
-            Thank you. Your in-room dining order has been received. Our team will prepare your order according to the selected delivery timing.
-          </p>
-          <button onClick={() => setSubmitted(false)}>Place Another Test Order</button>
-        </div>
+if (submitted) {
+  const deliveryTime =
+    orderType === "same-day" ? form.asapTiming : form.scheduledWindow;
+
+  const summaryItems = cartItems.map(
+    (item) => `${item.quantity} x ${item.name}`
+  );
+
+  return (
+    <div className="page center">
+      <div className="card success">
+        <h1>Thank You</h1>
+        <p>Your in-room dining order has been received.</p>
+
+        <h2>Estimated Delivery</h2>
+        <p><strong>{deliveryTime}</strong></p>
+
+        <h2>Order Summary</h2>
+        <ul className="plain-summary">
+          {summaryItems.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+
+        <p className="muted">
+          A receipt has been sent to the email address provided. For assistance,
+          please contact the Front Desk.
+        </p>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
   return (
     <div className="page">
@@ -257,7 +279,7 @@ export default function App() {
               <Field label="Mobile Phone Number *" error={errors.phone}>
                 <input value={form.phone} onChange={(e) => updateForm("phone", e.target.value)} />
               </Field>
-              <Field label="Email Address">
+              <Field label="Email Address *" error={errors.email}>
                 <input value={form.email} onChange={(e) => updateForm("email", e.target.value)} />
               </Field>
             </div>
