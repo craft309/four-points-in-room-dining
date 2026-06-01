@@ -416,6 +416,9 @@ if (submitted) {
                     timeWindows.map((window) => <option key={window}>{window}</option>)
                   )}
                 </select>
+                <p className="delivery-note">
+  Most orders arrive within 30–45 minutes.
+</p>
                 {errors.scheduledWindow && <p data-error="true" className="error">{errors.scheduledWindow}</p>}
               </>
             )}
