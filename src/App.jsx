@@ -309,7 +309,7 @@ if (submitted) {
   </ul>
 
   <p>
-    Join us in the restaurant or relax in your room
+    Enjoy Craft 309 favorites from the comfort of your room.
   </p>
 </section>
       <form onSubmit={handleSubmit} className="layout">
