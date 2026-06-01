@@ -325,8 +325,8 @@ textarea {
 }
 .favorites-card {
   max-width: 1040px;
-  margin: 0 auto 24px;
-  padding: 28px 22px;
+  margin: 0 auto 20px;
+  padding: 22px 20px;
   background: #F7F4EE;
   border: 1px solid #E5DED2;
   border-radius: 24px;
@@ -356,8 +356,8 @@ textarea {
   padding: 0;
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.55rem;
-  line-height: 1.55;
+  font-size: 1.45rem;
+  line-height: 1.45;
   color: #0F2F57;
 }
 
