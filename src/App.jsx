@@ -261,27 +261,15 @@ if (submitted) {
 
   return (
     <div className="page">
-     <header className="hero">
-
-  <img
-    src={fourPointsLogo}
-    alt="Four Points"
-    style={{
-      maxWidth: "260px",
-      marginBottom: "16px"
-    }}
-  />
-
-  <img
-    src={craft309Logo}
-    alt="Craft 309"
-    style={{
-      maxWidth: "180px",
-      marginBottom: "20px"
-    }}
-  />
-
-  <h1>Four Points In-Room Dining</h1>
+     <header className="craft-title">
+        Craft 309
+       </h1>
+<p className="kitchen-subtitle">
+  Kitchen + Bar
+</p>
+<p className="hero-dining-line">
+  Four Points In-Room Dining
+</p>
 
   <span>
     Prepared by Craft 309 and delivered directly to your room.
@@ -328,7 +316,9 @@ if (submitted) {
             return (
               <section className="card menu" key={section.id}>
                 <button type="button" className="menu-header" onClick={() => setOpenSection(open ? "" : section.id)}>
-                  <span><Icon size={20} /> {section.title}</span>
+                  <span className="section-title">
+  <Icon size={20} /> {section.title}
+</span>
                   <strong>{open ? "Close" : "Open"}</strong>
                 </button>
 
