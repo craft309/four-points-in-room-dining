@@ -294,7 +294,24 @@ if (submitted) {
     <strong>Lunch & Dinner:</strong> 12:00 PM – 10:00 PM
   </div>
 </header>
+<section className="favorites-card">
+  <h2>Chef&apos;s Favorites</h2>
 
+  <div className="favorites-divider"></div>
+
+  <ul>
+    <li>Steaks</li>
+    <li>Stuffed Salmon</li>
+    <li>Breakfast Pizza</li>
+    <li>Craft Burgers</li>
+    <li>Flatbreads</li>
+    <li>Weekly Specials</li>
+  </ul>
+
+  <p>
+    Breakfast, lunch, and dinner delivered directly to your room.
+  </p>
+</section>
       <form onSubmit={handleSubmit} className="layout">
         <main>
           <section className="card">
