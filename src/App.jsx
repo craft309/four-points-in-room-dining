@@ -261,15 +261,16 @@ if (submitted) {
 
   return (
     <div className="page">
-     <header className="craft-title">
-        Craft 309
-       </h1>
-<p className="kitchen-subtitle">
-  Kitchen + Bar
-</p>
-<p className="hero-dining-line">
-  Four Points In-Room Dining
-</p>
+    <header className="hero">
+  <p>Four Points by Sheraton</p>
+
+  <h1 className="craft-title">
+    In-Room Dining
+  </h1>
+
+  <p className="kitchen-subtitle">
+    Craft 309 Kitchen + Bar
+  </p>
 
   <span>
     Prepared by Craft 309 and delivered directly to your room.
@@ -286,7 +287,6 @@ if (submitted) {
     <br />
     <strong>Lunch & Dinner:</strong> 12:00 PM – 10:00 PM
   </div>
-
 </header>
 
       <form onSubmit={handleSubmit} className="layout">
