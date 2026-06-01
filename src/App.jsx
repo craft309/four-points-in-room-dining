@@ -448,7 +448,9 @@ if (submitted) {
             <div className="summary-line total"><span>Final Total</span><span>{money(total)}</span></div>
 
             {submitError && <div className="errorBox">{submitError}</div>}
-
+<p className="folio-note">
+  Your order will be charged to your room folio.
+</p>
             <button className="place" disabled={isSubmitting}>
               {isSubmitting ? "Submitting Order..." : "Place Order"}
             </button>
