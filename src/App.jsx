@@ -309,7 +309,7 @@ if (submitted) {
   </ul>
 
   <p>
-    Breakfast, lunch, and dinner delivered directly to your room.
+    Join us in the restaurant or relax in your room
   </p>
 </section>
       <form onSubmit={handleSubmit} className="layout">
