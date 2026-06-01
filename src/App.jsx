@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { ShoppingCart, Plus, Minus, Clock, Coffee, Utensils, Wine } from "lucide-react";
 import fourPointsLogo from "./assets/four-points-logo.png";
 import craft309Logo from "./assets/craft309.png";
-import heroImage from "./assets/room-service-hero.png";
+import heroImage from "./assets/hero-banner.png";
 
 const TAX_RATE = 0.12;
 const SERVICE_RATE = 0.07;
