@@ -1,10 +1,10 @@
 * { box-sizing: border-box; }
-#Lounge Color Palette#
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #FAFAF7;
-  color: #1F2937;
+  background: #F7F4EE;
+  color: #1C1C1C;
 }
 
 .page {
@@ -19,8 +19,8 @@ body {
 }
 
 .hero, .card {
-  background: white;
-  border: 1px solid #DDD5CB;
+  background: #FFFFFF;
+  border: 1px solid #E5DED2;
   border-radius: 24px;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
@@ -33,7 +33,7 @@ body {
 }
 
 .hero p {
-  color: #8B6B4F;
+  color: #B9974C;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 12px;
@@ -89,7 +89,7 @@ main, aside {
 .field span {
   font-size: 14px;
   font-weight: bold;
-  color: #334155;
+  color: #0F2F57;
 }
 
 input, select, textarea {
@@ -130,7 +130,7 @@ textarea {
 }
 
 .menu-header strong {
-  color: #8B6B4F;
+  color: #B9974C;
 }
 
 .menu-items {
@@ -141,8 +141,8 @@ textarea {
 }
 
 .item {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #FBF8F1;
+  border: 1px solid #E5DED2;
   border-radius: 20px;
   padding: 16px;
   display: flex;
@@ -162,7 +162,7 @@ textarea {
 }
 
 .item strong {
-  color: #8B6B4F;
+  color: #0F2F57;
 }
 
 .qty {
@@ -172,7 +172,7 @@ textarea {
 }
 
 .qty button {
-  border: 1px solid #bae6fd;
+  border: 1px solid #B9974C;
   background: white;
   border-radius: 999px;
   width: 36px;
@@ -210,7 +210,7 @@ textarea {
   width: 100%;
   border: 0;
   border-radius: 16px;
-  background: #8B6B4F;
+  background: #0F2F57;
   color: white;
   padding: 16px;
   font-size: 17px;
@@ -218,6 +218,10 @@ textarea {
   cursor: pointer;
 }
 
+.place:hover,
+.success button:hover {
+  background: #3A281C;
+}
 .place:disabled {
   opacity: 0.65;
   cursor: not-allowed;
