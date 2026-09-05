@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/menu",
+      "destination": "/craft309-menu.pdf",
+      "permanent": false
+    }
+  ]
+}
